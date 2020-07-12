@@ -17,7 +17,7 @@ public class ChatServer {
 
         while (true) {
             Socket client = serverSocket.accept();
-            AcceptClient acceptClient = new AcceptClient(client);
+            new AcceptClient(client);
         }
     }
 

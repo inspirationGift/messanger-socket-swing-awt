@@ -25,17 +25,6 @@ public class AcceptClient extends Thread {
         this.start();
     }
 
-//    public String getMsg(Socket client) {
-//        String str;
-//        try (DataInputStream din = new DataInputStream(client.getInputStream())) {
-//            str = din.readUTF();
-//        } catch (IOException e) {
-////            e.printStackTrace();
-//            str = "";
-//        }
-//        return str;
-//    }
-
     @Override
     public void run() {
 
@@ -53,7 +42,7 @@ public class AcceptClient extends Thread {
             String msgType = st.nextToken();
 
             while (st.hasMoreTokens()) {
-                this.msg += " " + st.nextToken();
+                this.msg = " " + st.nextToken();
             }
 
             if (msgType.equals("LOGIN")) {
